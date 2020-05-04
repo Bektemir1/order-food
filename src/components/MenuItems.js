@@ -17,7 +17,7 @@ class MenuItems extends Component {
                     </div>
                     <div className="col-lg-5 col-md-5 col-sm-5 col-xs-5">
                         <span className="mr-1"><b>{item.fooditem}</b></span>
-                        <b>Price:</b> {item.price}$
+                        <b>Prices:</b> {item.price}$
 
                         </div>
                     <div className="col-lg-2 col-md-2 col-sm-2 col-xs-3">
