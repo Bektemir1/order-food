@@ -2,7 +2,7 @@ import {ADD, REMOVE} from "../action/index";
 
 
 let initialState = {
-    inventory: [
+    menuList: [
         {fooditem: "Pasta Carbonara", price: 12.00},
         {fooditem: "Margherita Pizza", price: 27.00},
         {fooditem: "Mushroom Risotto", price: 16.00},
@@ -28,8 +28,7 @@ const foodsListReducer = (state = initialState, action) => {
                 });
             }
 
-            if(!alreadyInCart)
-            {
+            if(!alreadyInCart){
                 state.cart.push({
                     fooditem: action.item.fooditem,
                     price: action.item.price,

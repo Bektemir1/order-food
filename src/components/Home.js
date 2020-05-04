@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MenuItems from "./MenuItems";
-import CartItems from "./YourOrders";
+import YourOrders from "./YourOrders";
 import { connect } from 'react-redux';
 
 class Home extends Component {
@@ -14,7 +14,7 @@ class Home extends Component {
                         <hr/>
                         <div>
                             {
-                                this.props.stateArray.inventory.map((item, index) => {
+                                this.props.stateArray.menuList.map((item, index) => {
                                     return (
                                         
                                       
@@ -30,7 +30,7 @@ class Home extends Component {
                     <div className="col-md-6">
                         <h2>Your Orders</h2>
                         <hr/>
-                        <CartItems/>
+                        <YourOrders/>
                         <div className="text-center">
                             <label className="h1 control-label">Total Price: {this.props.stateArray.total.totalvalue}</label>
                         </div>
