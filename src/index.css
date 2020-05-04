@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background:url('../src/bg.jpg');
+  color:#fff !important;
+}
+.logo{
+  width:150px;
+  height:90px;
+  
+}
+.logo-block{
+display: flex;
+justify-content: center;
+}
