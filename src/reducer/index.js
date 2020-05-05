@@ -3,10 +3,10 @@ import {ADD, REMOVE} from "../action/index";
 
 let initialState = {
     menuList: [
-        {fooditem: "Pasta Carbonara", price: 12.00},
-        {fooditem: "Margherita Pizza", price: 27.00},
-        {fooditem: "Mushroom Risotto", price: 16.00},
-        {fooditem: "Panzenella", price: 10.00},
+        {fooditem: "Hamburger", price: 12.00},
+        {fooditem: "Dodo Pizza", price: 27.00},
+        {fooditem: "Coffee", price: 16.00},
+        {fooditem: "Milk with sugar", price: 10.00},
         {fooditem: "Bruschetta", price: 10.00},
         {fooditem: "Tiramisu", price: 6.00}
     ],
@@ -29,6 +29,7 @@ const foodsListReducer = (state = initialState, action) => {
             }
 
             if(!alreadyInCart){
+
                 state.cart.push({
                     fooditem: action.item.fooditem,
                     price: action.item.price,
@@ -46,7 +47,7 @@ const foodsListReducer = (state = initialState, action) => {
            let index=-1;
             state.cart.every((cartItem) => {
                 if(cartItem.fooditem===action.item.fooditem){
-                    index= state.cart.indexOf(cartItem);
+                  index = cartItem.numberOfFoods -= 1
                 }
                 return index;
             });
