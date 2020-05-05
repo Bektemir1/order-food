@@ -45,15 +45,29 @@ const foodsListReducer = (state = initialState, action) => {
 
         case REMOVE :
            let index=-1;
-            state.cart.every((cartItem) => {
+            
+            state.cart.map((cartItem) => {
                 if(cartItem.fooditem===action.item.fooditem){
-                  index = cartItem.numberOfFoods -= 1
-                }
+                    
+                    while(cartItem.numberOfFoods>1){
+                         cartItem = cartItem.numberOfFoods -= 1;
+
+                    }
+                   
+                    index = state.cart.indexOf(cartItem)
+             
+              }
+
+                  
                 return index;
             });
             if(index!==-1) {
+                 
                 state.cart.splice(index,1);
-                
+
+              
+              
+             
             }
             updateTotal(state);
            return {
