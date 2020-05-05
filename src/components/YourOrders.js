@@ -21,7 +21,7 @@ class CartItems extends Component {
                             <b>{item.fooditem}</b>
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-5 col-xs-4 mb-3">
-                            <b>Price:</b> {item.price}$
+                            <b>Price:</b> {item.price}$<br/>
                             <span> <b>Quantity: </b> {item.numberOfFoods}</span>
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-3 col-xs-4">
